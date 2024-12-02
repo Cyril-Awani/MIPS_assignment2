@@ -1,0 +1,49 @@
+/* Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	/* Rounded Gradient Spinner */
+	.gradient-spinner {
+		@apply w-28 h-28 rounded-full animate-spin; /* Circular size, rounded, and spinning */
+		background: conic-gradient(
+			from 0deg,
+			#4caf50,
+			#2196f3,
+			#ff5722,
+			#ffeb3b,
+			#4caf50
+		); /* Conic gradient for smooth circular effect */
+		mask: radial-gradient(
+			farthest-side,
+			transparent 80%,
+			black
+		); /* Hollow center */
+		-webkit-mask: radial-gradient(
+			farthest-side,
+			transparent 80%,
+			black
+		); /* Cross-browser compatibility */
+	}
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* Add this to your global CSS or Tailwind config */
+.carousel-container {
+	overflow-x: hidden;
+}
+
+.carousel {
+	display: flex;
+	gap: 1.5rem;
+}
+
+.min-w {
+	min-width: 320px; /* Ensure cards maintain consistent width */
+}
