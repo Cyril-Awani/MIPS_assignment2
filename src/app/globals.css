@@ -1,0 +1,37 @@
+/* Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* Add this to your global CSS or Tailwind config */
+.carousel-container {
+	scroll-behavior: smooth;
+}
+
+.carousel-container::-webkit-scrollbar {
+	height: 8px; /* Horizontal scrollbar */
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+}
+
+.carousel-container::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+.carousel {
+	display: flex;
+	gap: 1.5rem;
+}
+
+.min-w {
+	min-width: 320px; /* Ensure cards maintain consistent width */
+}
